@@ -1,3 +1,19 @@
+/* Variables */
+:root {
+  --color-primary: #FF4F21;
+  --color-secondary: #D10000;
+  --color-background: #121212;
+  --color-white: #FFFFFF;
+  --font-title: 'Anton', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+/* Genreal */
+html, body {
+  background-color: var(--color-background) !important;
+  color: var(--color-white) !important;
+}
+
 /* Navbar */
 .navbar {
     height: 80px;
