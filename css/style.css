@@ -18,7 +18,19 @@ body{
   padding-top: 70px; /* espacio para navbar fija */
 }
 
-/* Navbar brutal */
+/* Navbar */
+.logo-urban {
+  height: 42px;       
+  width: auto;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .logo-urban {
+    height: 34px;     
+  }
+} 
+
 .brutal-navbar{
   background: linear-gradient(90deg, var(--accent1), var(--accent3));
   padding: 0.6rem 0;
