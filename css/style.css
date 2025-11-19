@@ -15,6 +15,7 @@ body{
   color: var(--dark);
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
+  padding-top: 70px; /* espacio para navbar fija */
 }
 
 /* Navbar brutal */
