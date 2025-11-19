@@ -133,9 +133,63 @@ body{
 }
 .brutal-filter.active{ box-shadow: 6px 6px 0 rgba(0,0,0,0.08); transform: translateY(-2px); }
 
+/* ----- FILTROS RESPONSIVE ----- */
+.filters-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  padding-bottom: 4px;
+  margin-bottom: 1rem;
+}
+
+.filters-scroll {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 8px;
+  width: max-content;
+}
+
+.brutal-filter {
+  white-space: nowrap;
+}
+
+/* Mejor distribución en pantallas medianas */
+@media (min-width: 768px) {
+  .filters-scroll {
+    flex-wrap: wrap;          
+    width: 100%;
+    gap: 10px;
+    justify-content: flex-start;
+  }
+}
+
+/* En pantallas grandes, versión normal */
+@media (min-width: 992px) {
+  .filters-scroll {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+}
+
+
 /* accordion */
 .brutal-accordion .accordion-button{ background:var(--accent1); font-weight:800; color:var(--dark); border:3px solid var(--dark); }
 .brutal-accordion-btn{ font-weight:800; }
+
+/* ----- CAROUSEL FIXED HEIGHT ----- */
+#momentsCarousel .carousel-item img {
+  height: 420px;          /* Tamaño fijo para todas */
+  width: 100%;
+  object-fit: cover;      /* Recorta y mantiene proporciones */
+  object-position: center;
+  border-radius: 6px;     /* opcional, pero queda bien con el estilo */
+}
+
+/* versión responsive */
+@media (max-width: 768px) {
+  #momentsCarousel .carousel-item img {
+    height: 260px;
+  }
+}
 
 /* footer */
 .brutal-footer{
