@@ -250,8 +250,9 @@ a:hover{ text-decoration:none; }
   grid-auto-flow: dense;
 }
 
-.grid-wrapper div {
+.grid-wrapper > div {
   display: flex;
+  transform: none;
 }
 
 .grid-wrapper img {

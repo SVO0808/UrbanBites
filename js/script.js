@@ -63,11 +63,51 @@ $(function(){
 
 });
 
-// ScrollReveal
-ScrollReveal().reveal(".grid-wrapper > div", {
-  delay: 150,
-  distance: "40px",
-  interval: 80,
-  origin: "bottom",
-  scale: 0.92,
-});
+// --- robust ScrollReveal init con fallback --- //
+(function(){
+  // helper: desocultar si falla todo
+  function revealFallback() {
+    document.querySelectorAll('.grid-wrapper > div').forEach(function(el){
+      el.classList.add('is-visible-fallback');
+    });
+  }
+
+  // si ScrollReveal no está cargado aún, intentar cargar (rare) o usar fallback
+  if (typeof ScrollReveal === 'undefined') {
+    console.warn('ScrollReveal no encontrado — aplicando fallback (mostrar imágenes).');
+    // small delay to allow script tag to load if it's being injected late
+    setTimeout(function(){
+      if (typeof ScrollReveal === 'undefined') {
+        revealFallback();
+        return;
+      }
+      // si ya está cargado después del timeout, inicializar normalmente
+      initScrollReveal();
+    }, 120);
+    return;
+  }
+
+  // función que inicializa ScrollReveal de forma segura
+  function initScrollReveal(){
+    try {
+      ScrollReveal().reveal(".grid-wrapper > div", {
+        delay: 150,
+        distance: "40px",
+        interval: 80,
+        origin: "bottom",
+        scale: 0.92,
+        reset: false,
+        // cuando se revele, asegurar que fallback no interfiera
+        afterReveal: function(el){
+          el.classList.remove('is-visible-fallback');
+        }
+      });
+    } catch (err){
+      console.error('Error inicializando ScrollReveal:', err);
+      revealFallback();
+    }
+  }
+
+  // arrancar
+  initScrollReveal();
+})();
