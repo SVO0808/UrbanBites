@@ -1,9 +1,9 @@
 /* Variables de color */
 :root{
   --bg: #fff;
-  --accent1: #ffce00; /* amarillo neón */
-  --accent2: #ff3b3b; /* rojo fuerte */
-  --accent3: #00d1c1; /* turquesa */
+  --accent1: #ff4937; /* rojo fuerte */
+  --accent2: rgb(255, 88, 88); /* amarillo neón */
+  --accent3: #9e0707; /* turquesa */
   --dark: #0b0b0b;
   --muted: #f7f5f0;
 }
@@ -37,7 +37,7 @@ body{
 .hero{
   min-height: 70vh;
   display:block;
-  background: linear-gradient(180deg, rgba(255,255,255,0.95), rgba(255,255,255,0.9));
+  background: linear-gradient(180deg, rgb(255, 59, 59), rgba(248,249,250,1));
   padding: 4rem 0;
 }
 .brutal-title{
@@ -172,7 +172,7 @@ body{
 
 
 /* accordion */
-.brutal-accordion .accordion-button{ background:var(--accent1); font-weight:800; color:var(--dark); border:3px solid var(--dark); }
+.brutal-accordion .accordion-button{ background: white; font-weight:800; color:var(--dark); border:3px solid var(--dark); }
 .brutal-accordion-btn{ font-weight:800; }
 
 /* ----- CAROUSEL FIXED HEIGHT ----- */
@@ -208,7 +208,7 @@ body{
 .timeline-item .time{ font-weight:900; color:var(--accent2); min-width:70px; }
 
 /* contrast section background */
-.bg-contrast{ background: #fff2f0; }
+.bg-contrast{ background: var(--accent1); }
 
 /* responsive tweaks */
 @media(max-width:992px){
