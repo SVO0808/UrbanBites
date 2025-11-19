@@ -62,3 +62,12 @@ $(function(){
   });
 
 });
+
+// ScrollReveal
+ScrollReveal().reveal(".grid-wrapper > div", {
+  delay: 150,
+  distance: "40px",
+  interval: 80,
+  origin: "bottom",
+  scale: 0.92,
+});

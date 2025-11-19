@@ -239,3 +239,42 @@ a:hover{ text-decoration:none; }
 /* subtle hover on social links */
 .social{ color:var(--accent1); font-weight:700; }
 .social:hover{ color:#fff; transform:translateY(-2px); transition:.18s; }
+
+
+/* --- GALLERY MASONRY (compatible con Bootstrap) --- */
+.grid-wrapper {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-auto-rows: 200px;
+  grid-auto-flow: dense;
+}
+
+.grid-wrapper div {
+  display: flex;
+}
+
+.grid-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.grid-wrapper .wide {
+  grid-column: span 2;
+}
+.grid-wrapper .tall {
+  grid-row: span 2;
+}
+.grid-wrapper .big {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+@media (max-width: 768px) {
+  .grid-wrapper div {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+}
