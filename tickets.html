@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Entradas — StreetBite</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Inter:wght@300;600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg brutal-navbar">
+    <div class="container">
+      <a class="navbar-brand brutal-brand" href="index.html">STREETBITE</a>
+      <button class="navbar-toggler brutal-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav2">
+        <span class="brutal-burger">☰</span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav2">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link active" href="tickets.html">Entradas</a></li>
+          <li class="nav-item"><a class="nav-link" href="activities.html">Actividades</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="py-5">
+    <div class="container">
+      <h1 class="brutal-title" data-aos="fade-up">Entradas</h1>
+      <p class="mb-4" data-aos="fade-up" data-aos-delay="50">Elige la modalidad que más te convenga.</p>
+
+      <div class="row g-4">
+        <div class="col-12 col-md-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="card brutal-card">
+            <div class="card-body">
+              <h5 class="card-title">General</h5>
+              <p class="card-text">Acceso al recinto, puestos y actividades gratuitas.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <strong>10€</strong>
+                <button class="btn brutal-cta-sm" id="buyGeneral">Comprar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-4" data-aos="fade-up" data-aos-delay="150">
+          <div class="card brutal-card">
+            <div class="card-body">
+              <h5 class="card-title">VIP</h5>
+              <p class="card-text">Zona reservada, asientos y una bebida incluida.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <strong>25€</strong>
+                <button class="btn brutal-cta-sm" id="buyVip">Comprar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="card brutal-card">
+            <div class="card-body">
+              <h5 class="card-title">Pack Familiar</h5>
+              <p class="card-text">Entradas para 4 personas con descuento.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <strong>35€</strong>
+                <button class="btn brutal-cta-sm" id="buyFamily">Comprar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FORM (Bootstrap form component + jQuery interactivity) -->
+      <section class="mt-5" data-aos="fade-up">
+        <h4>Formulario de reserva rápida</h4>
+        <form id="reservationForm" class="row g-3 mt-2">
+          <div class="col-md-6">
+            <label for="name" class="form-label">Nombre</label>
+            <input type="text" class="form-control brutal-input" id="name" required>
+          </div>
+          <div class="col-md-6">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control brutal-input" id="email" required>
+          </div>
+          <div class="col-12 col-md-4">
+            <label for="type" class="form-label">Tipo de entrada</label>
+            <select id="type" class="form-select brutal-input">
+              <option>General</option>
+              <option>VIP</option>
+              <option>Pack Familiar</option>
+            </select>
+          </div>
+          <div class="col-12 col-md-4">
+            <label for="qty" class="form-label">Cantidad</label>
+            <input type="number" id="qty" class="form-control brutal-input" value="1" min="1">
+          </div>
+          <div class="col-12 col-md-4 d-flex align-items-end">
+            <button type="submit" class="btn brutal-cta w-100">Reservar</button>
+          </div>
+        </form>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="py-4 brutal-footer">
+    <div class="container d-flex justify-content-between">
+      <div>&copy; 2025 StreetBite</div>
+      <div>Contacto: info@streetbite.fest</div>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="js/scripts.js"></script>
+  <script> AOS.init({ duration:700, once:true }); </script>
+</body>
+</html>

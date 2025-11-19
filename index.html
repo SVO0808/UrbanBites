@@ -1,61 +1,294 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>UrbanBites</title>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>StreetBite Festival — Home</title>
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Inter:wght@300;600&display=swap" rel="stylesheet">
 
-    <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap 5.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css">
-  </head>
+  <!-- AOS (Animate On Scroll) -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
-  <body>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
 
-    <!-- NAVBAR BOOTSTRAP -->
-    <nav class="navbar navbar-expand-lg fixed-top w-100" style="background-color: var(--color-background);">
-      <div class="container-fluid px-4">
+</head>
+<body>
 
-        <!-- LOGO -->
-        <a class="navbar-brand d-flex align-items-center" href="#intro_section">
-          <img src="" alt="Logo UrbanBites" style="height:60px;">
-        </a>
+  <!-- NAVBAR (Bootstrap + collapse hamburger) -->
+  <nav class="navbar navbar-expand-lg brutal-navbar">
+    <div class="container">
+      <a class="navbar-brand brutal-brand" href="index.html">STREETBITE</a>
+      <button class="navbar-toggler brutal-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+        aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="brutal-burger">☰</span>
+      </button>
 
-        <!-- TOGGLER -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarNav" aria-controls="navbarNav"
-                aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="tickets.html">Entradas</a></li>
+          <li class="nav-item"><a class="nav-link" href="activities.html">Actividades</a></li>
+          <li class="nav-item"><button id="ctaTickets" class="btn brutal-cta ms-lg-3">Reserva</button></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-        <!-- LINKS -->
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-          <ul class="navbar-nav align-items-center">
+  <!-- HERO -->
+  <header class="hero">
+    <div class="container h-100 d-flex align-items-center">
+      <div class="row w-100">
+        <div class="col-lg-6 hero-left" data-aos="fade-right">
+          <h1 class="display-1 brutal-title">COMIDA CALLEJERA</h1>
+          <h2 class="lead brutal-lead">Sabores de Japón, China, México, Colombia e Italia. Música, talleres y más.</h2>
+          <div class="mt-4">
+            <a href="tickets.html" class="btn brutal-cta-large me-3">Comprar entradas</a>
+            <a href="#puestos" class="btn brutal-outline">Ver puestos</a>
+          </div>
+        </div>
 
-            <li class="nav-item">
-              <a class="nav-link px-3" href="#about">About us</a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link px-3" href="#more">Conoce más</a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link px-3 entrada" href="#entradas">Entradas</a>
-            </li>
-
-          </ul>
+        <div class="col-lg-6 hero-right d-none d-lg-block" data-aos="fade-left">
+          <!-- collage brutalista: usamos bloques coloridos -->
+          <div class="hero-collage">
+            <div class="collage-item c1">JAP</div>
+            <div class="collage-item c2">CHN</div>
+            <div class="collage-item c3">MEX</div>
+            <div class="collage-item c4">COL</div>
+            <div class="collage-item c5">ITA</div>
+          </div>
         </div>
       </div>
-    </nav>
+    </div>
+  </header>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-  </body>
+  <!-- SECCIÓN PUESTOS (Bootstrap grid + cards) -->
+  <section id="puestos" class="py-5 bg-light">
+    <div class="container">
+      <h3 class="section-title" data-aos="fade-up">Puestos destacados</h3>
+      <p class="section-sub">Explora los sabores de cada país</p>
+
+      <!-- filtros (interactividad con jQuery) -->
+      <div class="mb-4" data-aos="fade-up" data-aos-delay="50">
+        <div class="btn-group" role="group" aria-label="filtros">
+          <button class="btn btn-sm brutal-filter active" data-filter="all">Todos</button>
+          <button class="btn btn-sm brutal-filter" data-filter="japon">Japón</button>
+          <button class="btn btn-sm brutal-filter" data-filter="china">China</button>
+          <button class="btn btn-sm brutal-filter" data-filter="mexico">México</button>
+          <button class="btn btn-sm brutal-filter" data-filter="colombia">Colombia</button>
+          <button class="btn btn-sm brutal-filter" data-filter="italia">Italia</button>
+        </div>
+      </div>
+
+      <div class="row g-4" id="cardsRow">
+        <!-- Card 1 -->
+        <div class="col-12 col-md-6 col-lg-4 card-item japon" data-aos="zoom-in">
+          <div class="card brutal-card h-100">
+            <img src="https://via.placeholder.com/600x380?text=Ramen" class="card-img-top" alt="Ramen">
+            <div class="card-body">
+              <h5 class="card-title">Ramen Rāmu</h5>
+              <p class="card-text">Ramen tradicional con toque urbano.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <button class="btn btn-sm brutal-btn" data-bs-toggle="modal" data-bs-target="#infoModal" data-title="Ramen Rāmu" data-desc="Ramen auténtico con caldo lento">Más info</button>
+                <span class="badge bg-dark">Japón</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col-12 col-md-6 col-lg-4 card-item mexico" data-aos="zoom-in" data-aos-delay="50">
+          <div class="card brutal-card h-100">
+            <img src="https://via.placeholder.com/600x380?text=Tacos" class="card-img-top" alt="Tacos">
+            <div class="card-body">
+              <h5 class="card-title">Taquería La Calle</h5>
+              <p class="card-text">Tacos al pastor y salsas caseras.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <button class="btn btn-sm brutal-btn" data-bs-toggle="modal" data-bs-target="#infoModal" data-title="Taquería La Calle" data-desc="Tacos artesanales">Más info</button>
+                <span class="badge bg-danger">México</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col-12 col-md-6 col-lg-4 card-item china" data-aos="zoom-in" data-aos-delay="100">
+          <div class="card brutal-card h-100">
+            <img src="https://via.placeholder.com/600x380?text=Dumplings" class="card-img-top" alt="Dumplings">
+            <div class="card-body">
+              <h5 class="card-title">Dumpling House</h5>
+              <p class="card-text">Dumplings al vapor y salsas picantes.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <button class="btn btn-sm brutal-btn" data-bs-toggle="modal" data-bs-target="#infoModal" data-title="Dumpling House" data-desc="Especialidad en dumplings">Más info</button>
+                <span class="badge bg-warning text-dark">China</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="col-12 col-md-6 col-lg-4 card-item italia" data-aos="zoom-in" data-aos-delay="150">
+          <div class="card brutal-card h-100">
+            <img src="https://via.placeholder.com/600x380?text=Pizza" class="card-img-top" alt="Pizza">
+            <div class="card-body">
+              <h5 class="card-title">Forno Strada</h5>
+              <p class="card-text">Pizzas de masa madre al corte.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <button class="btn btn-sm brutal-btn" data-bs-toggle="modal" data-bs-target="#infoModal" data-title="Forno Strada" data-desc="Pizzas artesanales">Más info</button>
+                <span class="badge bg-success">Italia</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="col-12 col-md-6 col-lg-4 card-item colombia" data-aos="zoom-in" data-aos-delay="200">
+          <div class="card brutal-card h-100">
+            <img src="https://via.placeholder.com/600x380?text=Arepas" class="card-img-top" alt="Arepas">
+            <div class="card-body">
+              <h5 class="card-title">Arepa Street</h5>
+              <p class="card-text">Arepas rellenas con ingredientes creativos.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <button class="btn btn-sm brutal-btn" data-bs-toggle="modal" data-bs-target="#infoModal" data-title="Arepa Street" data-desc="Arepas gourmet">Más info</button>
+                <span class="badge bg-info text-dark">Colombia</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 6 (placeholder) -->
+        <div class="col-12 col-md-6 col-lg-4 card-item japon" data-aos="zoom-in" data-aos-delay="250">
+          <div class="card brutal-card h-100">
+            <img src="https://via.placeholder.com/600x380?text=Sushi+Roll" class="card-img-top" alt="Sushi">
+            <div class="card-body">
+              <h5 class="card-title">Sushi Pop</h5>
+              <p class="card-text">Rolls creativos ideales para compartir.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <button class="btn btn-sm brutal-btn" data-bs-toggle="modal" data-bs-target="#infoModal" data-title="Sushi Pop" data-desc="Sushi de autor">Más info</button>
+                <span class="badge bg-dark">Japón</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA + Cards slider (Bootstrap Carousel used as component) -->
+  <section class="py-5">
+    <div class="container">
+      <h4 class="mb-4" data-aos="fade-up">Momentos del Festival</h4>
+
+      <div id="momentsCarousel" class="carousel slide brutal-carousel" data-bs-ride="carousel" data-aos="fade-up">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://via.placeholder.com/1200x400?text=Street+Food+1" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="https://via.placeholder.com/1200x400?text=Music+Stage" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="https://via.placeholder.com/1200x400?text=Workshops" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#momentsCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#momentsCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Siguiente</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ (Accordion - Bootstrap component) -->
+  <section class="py-5 bg-contrast">
+    <div class="container">
+      <h4 data-aos="fade-up">Preguntas frecuentes</h4>
+      <div class="accordion brutal-accordion mt-3" id="faqAccordion" data-aos="fade-up" data-aos-delay="50">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button collapsed brutal-accordion-btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+              ¿Necesito entrada para entrar?
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">Sí, algunas áreas del festival requieren entrada. Consulta la sección Entradas.</div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed brutal-accordion-btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              ¿Habrá opciones vegetarianas/veganas?
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">Sí, varios puestos ofrecen opciones sin carne y adaptables.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-4 brutal-footer">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div>&copy; 2025 StreetBite Festival</div>
+      <div class="d-flex gap-3">
+        <a class="social" href="#">IG</a>
+        <a class="social" href="#">TW</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- INFO MODAL (Bootstrap modal) -->
+  <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content brutal-modal">
+        <div class="modal-header">
+          <h5 class="modal-title" id="infoModalLabel">Detalle</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <h5 id="modalTitle">Título</h5>
+          <p id="modalDesc">Descripción</p>
+        </div>
+        <div class="modal-footer">
+          <a href="tickets.html" class="btn brutal-cta">Comprar</a>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCRIPTS -->
+  <!-- jQuery (requerido por la parte de la práctica) -->
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+  <!-- Bootstrap Bundle (includes Popper) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- AOS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+  <!-- Custom JS -->
+  <script src="js/script.js"></script>
+
+  <script>
+    // Iniciar AOS
+    AOS.init({
+      duration: 700,
+      once: true
+    });
+  </script>
+</body>
 </html>
