@@ -71,8 +71,8 @@ body{
 /* collage hero */
 .hero-collage{ display:flex; flex-wrap:wrap; gap:10px; justify-content:center; }
 .collage-item{
-  width:48%;
-  height:90px;
+  width:68%;
+  height:60px;
   display:flex;
   align-items:center;
   justify-content:center;
