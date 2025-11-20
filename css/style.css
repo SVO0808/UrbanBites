@@ -50,7 +50,7 @@ body{
 
 .brutal-navbar{
   background: var(--accent1);
-  padding: 1.0rem 0;
+  padding: 1.0rem 4.2rem;
   border-bottom: 6px solid var(--dark);
   font-family: 'Montserrat', sans-serif;
   font-weight: 900;
@@ -444,11 +444,21 @@ a:hover{
 .brutal-input{ border:3px solid var(--dark); padding:.6rem; font-weight:600; }
 
 /* modal content title */
-#modalTitle{ font-family:'Montserrat',sans-serif; font-weight:900; margin-bottom:.5rem; }
+#modalTitle{
+  font-family:'Montserrat',sans-serif;
+  font-weight:900; margin-bottom:.5rem;
+}
 
 /* subtle hover on social links */
-.social{ color:var(--accent1); font-weight:700; }
-.social:hover{ color:#fff; transform:translateY(-2px); transition:.18s; }
+.social{
+  color:var(--accent1);
+  font-weight:700;
+}
+.social:hover{
+  color:#fff;
+  transform:translateY(-2px);
+  transition:.18s;
+}
 
 
 /* --- GALLERY MASONRY (compatible con Bootstrap) --- */

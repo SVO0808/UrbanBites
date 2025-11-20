@@ -38,7 +38,7 @@
         <i class="fa-solid fa-cart-shopping fa-lg"></i>
 
         <span id="cartCount" 
-              class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark text-warning"
+              class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark text-white"
               style="font-size: 0.7rem;">
           0
         </span>
@@ -67,14 +67,14 @@
   <main class="py-5">
     <div class="container">
       <h1 class="brutal-title" data-aos="fade-up">ENTRADAS</h1>
-      <p class="mb-4" data-aos="fade-up" data-aos-delay="50">Elige la modalidad que más te convenga.</p>
+      <p class="mb-4" data-aos="fade-up" data-aos-delay="50">¡Reserva tus entradas seleccionando la que más te interese!</p>
 
       <div class="row g-4">
         <div class="col-12 col-md-4" data-aos="fade-up" data-aos-delay="100">
           <div class="card brutal-card">
             <div class="card-body">
-              <h5 class="card-title">General</h5>
-              <p class="card-text">Acceso al recinto, puestos y actividades gratuitas.</p>
+              <h5 class="card-title monty-title">General</h5>
+              <p class="card-text ">Acceso directo al recinto a cualquier hora, puestos y actividades.</p>
               <div class="d-flex justify-content-between align-items-center">
                 <strong>10€</strong>
                 <button class="btn brutal-cta-sm" id="buyGeneral">Comprar</button>
@@ -86,8 +86,8 @@
         <div class="col-12 col-md-4" data-aos="fade-up" data-aos-delay="150">
           <div class="card brutal-card">
             <div class="card-body">
-              <h5 class="card-title">VIP</h5>
-              <p class="card-text">Zona reservada, asientos y una bebida incluida.</p>
+              <h5 class="card-title monty-title">VIP</h5>
+              <p class="card-text">Zona exclusiva, asientos reservados y una actividad de pago gratis.</p>
               <div class="d-flex justify-content-between align-items-center">
                 <strong>25€</strong>
                 <button class="btn brutal-cta-sm" id="buyVip">Comprar</button>
@@ -99,11 +99,11 @@
         <div class="col-12 col-md-4" data-aos="fade-up" data-aos-delay="200">
           <div class="card brutal-card">
             <div class="card-body">
-              <h5 class="card-title">Pack Familiar</h5>
-              <p class="card-text">Entradas para 4 personas con descuento.</p>
+              <h5 class="card-title monty-title">Pack en Dúo</h5>
+              <p class="card-text">Para que vengas con tu mejor amigx o pareja. Os lleváis un 2x1 en bebidas.</p>
               <div class="d-flex justify-content-between align-items-center">
-                <strong>35€</strong>
-                <button class="btn brutal-cta-sm" id="buyFamily">Comprar</button>
+                <strong>18€</strong>
+                <button class="btn brutal-cta-sm" id="buyDuet">Comprar</button>
               </div>
             </div>
           </div>
@@ -112,7 +112,7 @@
 
       <!-- FORM (Bootstrap form component + jQuery interactivity) -->
       <section class="mt-5" data-aos="fade-up">
-        <h4>Formulario de reserva rápida</h4>
+        <h4 class="monty-title">Formulario de reserva rápida</h4>
         <form id="reservationForm" class="row g-3 mt-2">
           <div class="col-md-6">
             <label for="name" class="form-label">Nombre</label>
@@ -127,7 +127,7 @@
             <select id="type" class="form-select brutal-input">
               <option>General</option>
               <option>VIP</option>
-              <option>Pack Familiar</option>
+              <option>Pack en Dúo</option>
             </select>
           </div>
           <div class="col-12 col-md-4">

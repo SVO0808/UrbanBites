@@ -65,7 +65,7 @@ $(function(){
     updateCart();
   });
 
-  $('#buyFamily').on('click', function(){
+  $('#buyDuet').on('click', function(){
     cartCount++;
     updateCart();
   });
