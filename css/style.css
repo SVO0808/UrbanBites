@@ -218,12 +218,12 @@ body{
 /* --- Responsividad del título y subtítulo --- */
 
 .parallax-title {
-  font-size: clamp(1.6rem, 5vw, 2rem);
+  font-size: clamp(1.3rem, 4vw, 2rem);
   line-height: 1.1;
 }
 
 .parallax-subtitle {
-  font-size: clamp(0.9rem, 2.8vw, 1.3rem);
+  font-size: clamp(0.7rem, 2.8vw, 1.3rem);
   color: var(--accent1);
 }
 
