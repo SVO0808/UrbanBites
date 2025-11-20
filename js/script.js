@@ -1,6 +1,6 @@
-// scripts.js
 $(function(){
-  // rellenar modal con datos del botón "Más info"
+
+  // --- MODAL INFO ---
   $('#infoModal').on('show.bs.modal', function (event) {
     var button = $(event.relatedTarget);
     var title = button.data('title') || 'Detalle';
@@ -10,7 +10,7 @@ $(function(){
     modal.find('#modalDesc').text(desc);
   });
 
-  // filtros por país - manipulación DOM con jQuery
+  // --- FILTROS ---
   $('.brutal-filter').on('click', function(){
     $('.brutal-filter').removeClass('active');
     $(this).addClass('active');
@@ -23,7 +23,7 @@ $(function(){
     }
   });
 
-  // Smooth scroll a secciones (cuando se clickea enlace con hash)
+  // Smooth scroll
   $('a[href^="#"]').on('click', function(e){
     var target = this.hash;
     if(target){
@@ -35,24 +35,49 @@ $(function(){
     }
   });
 
-  // Formulario de reservas: prevenir envío real y simular confirmación
+  // --- FORM RESERVA ---
   $('#reservationForm').on('submit', function(e){
     e.preventDefault();
     var name = $('#name').val();
     var type = $('#type').val();
-    // simple feedback
     alert('Gracias, ' + name + '. Tu reserva de tipo "' + type + '" ha sido recibida.');
     $(this)[0].reset();
   });
 
-  // CTA botones de compra que simulan acción
-  $('#buyGeneral, #buyVip, #buyFamily, #ctaTickets').on('click', function(){
-    alert('Redirigiendo a la pasarela de pago (simulado).');
-    // podrías redirigir a /entradas.html
-    window.location.href = 'entradas.html';
+
+  // ------------------------------------------------
+  //   🛒 CONTADOR SIMPLE DEL CARRITO
+  // ------------------------------------------------
+  let cartCount = 0;
+
+  function updateCart() {
+    $('#cartCount').text(cartCount);
+  }
+
+  // Botones de compra
+  $('#buyGeneral').on('click', function(){
+    cartCount++;
+    updateCart();
   });
 
-  // cerrar nav collapse al clicar un enlace en móvil (mejora UX)
+  $('#buyVip').on('click', function(){
+    cartCount++;
+    updateCart();
+  });
+
+  $('#buyFamily').on('click', function(){
+    cartCount++;
+    updateCart();
+  });
+
+
+  // --- CTA Tickets (solo si lo usas) ---
+  $('#ctaTickets').on('click', function(){
+    alert('Redirigiendo a las entradas...');
+    window.location.href = 'tickets.html';
+  });
+
+  // --- CERRAR MENU MOVIL ---
   $('.navbar-nav .nav-link').on('click', function(){
     var navbarCollapse = $('.navbar-collapse');
     if(navbarCollapse.hasClass('show')){
@@ -61,33 +86,32 @@ $(function(){
     }
   });
 
-});
+}); // FIN DOM READY
 
-// --- robust ScrollReveal init con fallback --- //
+
+
+// ------------------------------------------------
+//      ScrollReveal seguro con fallback
+// ------------------------------------------------
 (function(){
-  // helper: desocultar si falla todo
   function revealFallback() {
     document.querySelectorAll('.grid-wrapper > div').forEach(function(el){
       el.classList.add('is-visible-fallback');
     });
   }
 
-  // si ScrollReveal no está cargado aún, intentar cargar (rare) o usar fallback
   if (typeof ScrollReveal === 'undefined') {
-    console.warn('ScrollReveal no encontrado — aplicando fallback (mostrar imágenes).');
-    // small delay to allow script tag to load if it's being injected late
+    console.warn('ScrollReveal no encontrado — fallback.');
     setTimeout(function(){
       if (typeof ScrollReveal === 'undefined') {
         revealFallback();
         return;
       }
-      // si ya está cargado después del timeout, inicializar normalmente
       initScrollReveal();
     }, 120);
     return;
   }
 
-  // función que inicializa ScrollReveal de forma segura
   function initScrollReveal(){
     try {
       ScrollReveal().reveal(".grid-wrapper > div", {
@@ -97,21 +121,23 @@ $(function(){
         origin: "bottom",
         scale: 0.92,
         reset: false,
-        // cuando se revele, asegurar que fallback no interfiera
         afterReveal: function(el){
           el.classList.remove('is-visible-fallback');
         }
       });
     } catch (err){
-      console.error('Error inicializando ScrollReveal:', err);
+      console.error('Error SR:', err);
       revealFallback();
     }
   }
 
-  // arrancar
   initScrollReveal();
 })();
 
+
+// ------------------------------------------------
+//      Filtros UB
+// ------------------------------------------------
 document.querySelectorAll(".ub-filter-btn").forEach(btn => {
   btn.addEventListener("click", () => {
     const filter = btn.getAttribute("data-filter");
@@ -125,25 +151,22 @@ document.querySelectorAll(".ub-filter-btn").forEach(btn => {
 });
 
 
-
+// ------------------------------------------------
+//      Timeline por días
+// ------------------------------------------------
 document.querySelectorAll(".ub-day-btn").forEach(btn => {
   btn.addEventListener("click", () => {
     const day = btn.dataset.day;
 
-    // Activar botón
     document.querySelectorAll(".ub-day-btn").forEach(b => b.classList.remove("active"));
     btn.classList.add("active");
 
-    // Mostrar timeline correspondiente
     document.querySelectorAll(".ub-timeline-day").forEach(sec => {
       sec.classList.add("d-none");
     });
     document.getElementById(day).classList.remove("d-none");
   });
 });
-
-
-
 
 
 
