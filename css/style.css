@@ -20,14 +20,14 @@ body{
 
 /* Navbar */
 .logo-urban {
-  height: 42px;       
+  height: 32px;       
   width: auto;
   object-fit: contain;
 }
 
 @media (max-width: 768px) {
   .logo-urban {
-    height: 34px;     
+    height: 24px;     
   }
 } 
 
