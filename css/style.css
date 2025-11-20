@@ -1,9 +1,7 @@
 /* Variables de color */
 :root{
   --bg: #fff;
-  --accent1: #ff4937; /* rojo fuerte */
-  --accent2: rgb(255, 88, 88); /* amarillo neón */
-  --accent3: #9e0707; /* turquesa */
+  --accent1: #ff4937;
   --dark: #0b0b0b;
   --muted: #f7f5f0;
 }
@@ -32,7 +30,7 @@ body{
 } 
 
 .brutal-navbar{
-  background: linear-gradient(90deg, var(--accent1), var(--accent3));
+  background: var(--accent1);
   padding: 1.0rem 0;
   border-bottom: 6px solid var(--dark);
 }
@@ -56,8 +54,38 @@ body{
   align-items: center;
   justify-content: center;
   border-bottom: 6px solid var(--dark);
-  background: black;
+
+  background: url("https://images.unsplash.com/photo-1600891964599-f61ba0e24092") center/cover no-repeat;
+
+
 }
+
+/* Overlay oscuro SOLO sobre la imagen */
+.parallax-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.747); /* <- AJUSTA EL OSCURECIMIENTO */
+  z-index: 0; /* detrás del contenido */
+}
+
+/* Todo lo que va encima del fondo (emojis, logo, botones...) */
+.parallax-layer,
+.parallax-center-content {
+  position: relative;
+  z-index: 2;
+}
+
+.parallax-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: black;  
+  opacity: 50%;
+  z-index: 1;
+  pointer-events: none;
+}
+
 
 /* ==== EFECTO DE PULSO RADIAL EN EL FONDO ==== */
 .parallax-hero::before {
@@ -65,14 +93,12 @@ body{
   position: absolute;
   inset: 0;
   z-index: 0;
-  
-  /* Esto obliga al gradiente a estar EXACTAMENTE en el centro real */
-  background: radial-gradient(circle, #00000000 0%, #ff3131 50%, #00000000 100%);
+  background: radial-gradient(circle, #000000 40%, #ff4937 50%, #000000 60%);
   
 
-  background-position: center center;  /* ← SUPER IMPORTANTE */
+  background-position: center center;  
   background-repeat: no-repeat;
-  background-size: 140% 140%;          /* tamaño inicial */
+  background-size: 140% 140%;      
   
   animation: pulseRadial 3.5s ease-in-out infinite;
   pointer-events: none;
@@ -147,13 +173,14 @@ body{
 .parallax-title {
   font-family: 'Montserrat', sans-serif;
   font-weight: 900; 
-  color: var(--dark);
+  color: white;
   margin-bottom: .5rem;
+  margin-top: 2rem;
 }
 
 /* SUBTÍTULO */
 .parallax-subtitle {
-  color: #222;
+  color: white;
   font-size: 1.2rem;
   font-weight: 700;
   margin-top: 0.5rem;
@@ -182,13 +209,13 @@ body{
 
 /* Buttons */
 .brutal-btn{
-  background:var(--accent2);
+  background:var(--accent1);
   color:#fff;
   border:0;
   font-weight:700;
   padding:.45rem .8rem;
   border-radius:4px;
-  transition: transform .15s ease, background .15s;
+  transition: transform .15s ease, black .15s;
 }
 .brutal-btn:hover{ transform: translateY(-3px); filter:brightness(.95); }
 
@@ -200,7 +227,7 @@ body{
   border-radius:3px;
 }
 .brutal-cta-large{
-  background:var(--accent2);
+  background:var(--accent1);
   color:#fff;
   padding:.8rem 1.2rem;
   font-weight:900;
@@ -321,7 +348,7 @@ body{
 /* timeline */
 .brutal-timeline{ border-left: 6px solid var(--dark); padding-left:1.5rem; }
 .timeline-item{ margin-bottom:1rem; display:flex; gap:1rem; align-items:flex-start; }
-.timeline-item .time{ font-weight:900; color:var(--accent2); min-width:70px; }
+.timeline-item .time{ font-weight:900; color:var(--accent1); min-width:70px; }
 
 /* contrast section background */
 .bg-contrast{ background: var(--accent1); }
