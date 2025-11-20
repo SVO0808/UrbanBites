@@ -26,6 +26,12 @@ body{
   font-family: "Rackety", 'Montserrat', sans-serif;
   font-weight: normal; 
   font-size: 3rem;   
+  line-height: 60%;
+}
+
+.monty-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
 }
 
 
@@ -46,6 +52,8 @@ body{
   background: var(--accent1);
   padding: 1.0rem 0;
   border-bottom: 6px solid var(--dark);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
 }
 .brutal-brand{
   font-family: 'Montserrat', sans-serif;
@@ -399,11 +407,22 @@ body{
 }
 
 /* small hover animation for links */
-a:hover{ text-decoration:none; }
+a:hover{
+  text-decoration:none;
+}
 
 /* small visual accents */
-.section-title{ font-family:'Montserrat',sans-serif; font-weight:900; font-size:1.25rem; margin-bottom:.25rem; }
-.section-sub{ color:#444; margin-bottom:1.25rem; }
+.section-title{
+  font-family: "Rackety", 'Montserrat', sans-serif;
+  font-weight: normal; 
+  font-size: 3rem;
+  margin-bottom:.25rem;
+  line-height: 60%;
+}
+.section-sub {
+  color:#444;
+  margin-bottom:1.25rem;
+}
 
 /* brutal carousel overrides */
 .brutal-carousel .carousel-control-prev-icon,
