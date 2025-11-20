@@ -215,6 +215,25 @@ body{
   .parallax-title { font-size: 1.4rem; }
 }
 
+/* --- Responsividad del título y subtítulo --- */
+
+.parallax-title {
+  font-size: clamp(1.6rem, 5vw, 2rem);
+  line-height: 1.1;
+}
+
+.parallax-subtitle {
+  font-size: clamp(0.9rem, 2.8vw, 1.3rem);
+  color: var(--accent1);
+}
+
+/* Arreglos para botones: que no se encojan raro */
+.parallax-center-content .btn {
+  font-size: clamp(0.9rem, 2.3vw, 1.1rem);
+}
+
+
+
 
 /* Fin de la cabecera  */
 
@@ -258,9 +277,9 @@ body{
 
 /* outline button */
 .brutal-outline{
-  background: transparent;
-  border: 3px solid var(--dark);
-  color:var(--dark);
+  background: rgba(255, 255, 255, 0.096);
+  border: 1px solid white;
+  color: white;
   font-weight:800;
   padding:.45rem .8rem;
   border-radius:3px;
