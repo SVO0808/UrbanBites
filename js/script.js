@@ -111,3 +111,55 @@ $(function(){
   // arrancar
   initScrollReveal();
 })();
+
+document.querySelectorAll(".ub-filter-btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const filter = btn.getAttribute("data-filter");
+    document.querySelectorAll(".ub-activity").forEach(card => {
+      card.style.display = 
+        filter === "all" || card.classList.contains(filter)
+        ? "block"
+        : "none";
+    });
+  });
+});
+
+
+
+document.querySelectorAll(".ub-day-btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const day = btn.dataset.day;
+
+    // Activar botón
+    document.querySelectorAll(".ub-day-btn").forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+
+    // Mostrar timeline correspondiente
+    document.querySelectorAll(".ub-timeline-day").forEach(sec => {
+      sec.classList.add("d-none");
+    });
+    document.getElementById(day).classList.remove("d-none");
+  });
+});
+
+
+
+
+
+
+
+
+
+// const btns = document.querySelectorAll('.filter-btn');
+// const items = document.querySelectorAll('.activity');
+
+// btns.forEach(btn => {
+//   btn.onclick = () => {
+//     const filter = btn.getAttribute('data-filter');
+//     items.forEach(item => {
+//       item.style.display = (filter === "all" || item.classList.contains(filter))
+//         ? "block"
+//         : "none";
+//     });
+//   };
+// });

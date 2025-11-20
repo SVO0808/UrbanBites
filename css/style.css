@@ -394,3 +394,93 @@ a:hover{ text-decoration:none; }
     grid-row: span 2;
   }
 }
+
+
+
+/* Línea vertical */
+.ub-timeline {
+  position: relative;
+  border-left: 3px solid #ddd;
+  padding-left: 2rem;
+}
+
+.ub-timeline-item {
+  position: relative;
+  margin-bottom: 3rem;
+}
+
+/* Punto de la línea */
+.ub-timeline-dot {
+  width: 18px;
+  height: 18px;
+  background: #ff3b3f; /* puedes cambiarlo */
+  border-radius: 50%;
+  position: absolute;
+  left: -9px;
+  top: 3px;
+}
+
+/* Hora */
+.ub-timeline-time {
+  font-weight: 600;
+  margin-bottom: .5rem;
+  color: #333;
+}
+
+/* Cards visibles */
+.ub-timeline-card {
+  transition: transform .2s ease, box-shadow .2s ease;
+  cursor: pointer;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+
+
+
+.ub-timeline {
+  position: relative;
+  border-left: 3px solid #ddd;
+  padding-left: 2rem;
+}
+
+.ub-timeline-item {
+  position: relative;
+  margin-bottom: 3rem;
+}
+
+.ub-timeline-dot {
+  width: 18px;
+  height: 18px;
+  background: #ff3b3f;
+  border-radius: 50%;
+  position: absolute;
+  left: -9px;
+  top: 3px;
+}
+
+.ub-timeline-time {
+  font-weight: 600;
+  margin-bottom: .5rem;
+  color: #333;
+  padding-left: 8px; 
+  margin-left: 6px;
+}
+
+.ub-timeline-card {
+  transition: transform .2s ease, box-shadow .2s ease;
+  cursor: pointer;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.ub-timeline-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,.15);
+}
+
+/* Día activo */
+.ub-day-btn.active {
+  background: var(--bs-primary);
+  color: #fff !important;
+}
