@@ -521,10 +521,11 @@ a:hover{ text-decoration:none; }
 }
 
 .ub-timeline-card {
-  transition: transform .2s ease, box-shadow .2s ease;
-  cursor: pointer;
+  max-width: 420px;      /* ← ajústalo a tu gusto (380–450px queda perfecto) */
+  width: 100%;
   border-radius: 12px;
   overflow: hidden;
+  transition: transform .2s, box-shadow .2s;
 }
 
 .ub-timeline-card:hover {
@@ -536,4 +537,19 @@ a:hover{ text-decoration:none; }
 .ub-day-btn.active {
   background: var(--bs-primary);
   color: #fff !important;
+}
+
+.ub-vertical-title {
+  writing-mode: vertical-rl;
+  text-orientation: sideways;
+  font-family: 'Montserrat';
+  font-weight: 900;
+  font-size: 3rem;
+  letter-spacing: 4px;
+  opacity: 0.15;
+  user-select: none;
+  height: 100%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
 }

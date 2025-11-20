@@ -54,179 +54,228 @@
      ============================ -->
 
   <section class="container my-5" id="actividades-ub">
-    <h2 class="fw-bold mb-4">Actividades & Ocio</h2>
+  <h2 class="fw-bold mb-4">Actividades & Ocio</h2>
 
-    <!-- Selector de días -->
-    <div class="d-flex gap-2 mb-4 flex-wrap">
-      <button class="btn btn-outline-primary ub-day-btn active" data-day="dia1">Jueves 17</button>
-      <button class="btn btn-outline-primary ub-day-btn" data-day="dia2">Viernes 19</button>
-      <button class="btn btn-outline-primary ub-day-btn" data-day="dia3">Sábado 20</button>
+  <!-- Selector de días -->
+  <div class="d-flex gap-2 mb-4 flex-wrap">
+    <button class="btn btn-outline-primary ub-day-btn active" data-day="dia1">Jueves 17</button>
+    <button class="btn btn-outline-primary ub-day-btn" data-day="dia2">Viernes 19</button>
+    <button class="btn btn-outline-primary ub-day-btn" data-day="dia3">Sábado 20</button>
+  </div>
+
+  <!-- CONTENEDOR DE TODOS LOS TIMELINES -->
+  <div class="ub-day-content">
+
+
+    <!-- ======================================
+         DÍA 1
+    ======================================= -->
+    <div class="ub-timeline-day" id="dia1">
+
+      <div class="row g-4 align-items-stretch">
+
+        <!-- TIMELINE -->
+        <div class="col-lg-9">
+          <div class="ub-timeline">
+
+            <!-- ACTIVIDAD 1 -->
+            <div class="ub-timeline-item">
+              <div class="ub-timeline-dot"></div>
+              <div class="ub-timeline-time">16:00</div>
+
+              <div class="card ub-timeline-card" data-bs-toggle="offcanvas" data-bs-target="#infoDia1Act1">
+                <img src="img/dj.jpg" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">DJ Urban Warmup</h5>
+                  <p class="card-text small mb-1">Música urbana suave para arrancar.</p>
+                  <span class="badge bg-danger">Música</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- ACTIVIDAD 2 -->
+            <div class="ub-timeline-item">
+              <div class="ub-timeline-dot"></div>
+              <div class="ub-timeline-time">19:00</div>
+
+              <div class="card ub-timeline-card" data-bs-toggle="offcanvas" data-bs-target="#infoDia1Act2">
+                <img src="img/burger.jpg" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">Workshop Smash Burgers</h5>
+                  <p class="card-text small mb-1">Aprende la smash perfecta.</p>
+                  <span class="badge bg-warning text-dark">Taller</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- ACTIVIDAD 3 -->
+            <div class="ub-timeline-item">
+              <div class="ub-timeline-dot"></div>
+              <div class="ub-timeline-time">20:30</div>
+
+              <div class="card ub-timeline-card" data-bs-toggle="offcanvas" data-bs-target="#infoDia1Act3">
+                <img src="img/show.jpg" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">Street Freestyle Jam</h5>
+                  <p class="card-text small mb-1">Show urbano participativo.</p>
+                  <span class="badge bg-primary">Show</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- TEXTO VERTICAL -->
+        <div class="col-lg-3 d-none d-lg-flex justify-content-center">
+          <div class="ub-vertical-title">ACTIVIDADES</div>
+        </div>
+
+      </div>
     </div>
 
-    <!-- CONTENEDOR DE TODOS LOS TIMELINES -->
-    <div class="ub-day-content">
 
-      <!-- =======================
-          TIMELINE — DÍA 1
-          ======================= -->
-      <div class="ub-timeline-day" id="dia1">
-        <div class="ub-timeline">
 
-          <!-- Actividad 1 -->
-          <div class="ub-timeline-item">
-            <div class="ub-timeline-dot"></div>
-            <div class="ub-timeline-time">16:00</div>
+    <!-- ======================================
+         DÍA 2
+    ======================================= -->
+    <div class="ub-timeline-day d-none" id="dia2">
 
-            <div class="card ub-timeline-card" data-bs-toggle="offcanvas" data-bs-target="#infoDia1Act1">
-              <img src="img/dj.jpg" class="card-img-top">
-              <div class="card-body">
-                <h5 class="card-title">DJ Urban Warmup</h5>
-                <p class="card-text small mb-1">Música urbana suave para arrancar.</p>
-                <span class="badge bg-danger">Música</span>
+      <div class="row g-4 align-items-stretch">
+
+        <!-- TIMELINE -->
+        <div class="col-lg-9">
+          <div class="ub-timeline">
+
+            <!-- ACTIVIDAD 1 -->
+            <div class="ub-timeline-item">
+              <div class="ub-timeline-dot"></div>
+              <div class="ub-timeline-time">17:00</div>
+
+              <div class="card ub-timeline-card" data-bs-toggle="offcanvas" data-bs-target="#infoDia2Act1">
+                <img src="img/show.jpg" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">Street Battle</h5>
+                  <p class="card-text small mb-1">Competición de baile urbana.</p>
+                  <span class="badge bg-primary">Show</span>
+                </div>
               </div>
             </div>
-          </div>
 
-          <!-- Actividad 2 -->
-          <div class="ub-timeline-item">
-            <div class="ub-timeline-dot"></div>
-            <div class="ub-timeline-time">19:00</div>
+            <!-- ACTIVIDAD 2 -->
+            <div class="ub-timeline-item">
+              <div class="ub-timeline-dot"></div>
+              <div class="ub-timeline-time">18:30</div>
 
-            <div class="card ub-timeline-card" data-bs-toggle="offcanvas" data-bs-target="#infoDia1Act2">
-              <img src="img/burger.jpg" class="card-img-top">
-              <div class="card-body">
-                <h5 class="card-title">Workshop Smash Burgers</h5>
-                <p class="card-text small mb-1">Aprende la smash perfecta.</p>
-                <span class="badge bg-warning text-dark">Taller</span>
+              <div class="card ub-timeline-card" data-bs-toggle="offcanvas" data-bs-target="#infoDia2Act2">
+                <img src="img/burger.jpg" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">International Food Challenge</h5>
+                  <p class="card-text small mb-1">Reto gastronómico multicultural.</p>
+                  <span class="badge bg-warning text-dark">Comida</span>
+                </div>
               </div>
             </div>
-          </div>
 
-          <!-- Actividad 3 -->
-          <div class="ub-timeline-item">
-            <div class="ub-timeline-dot"></div>
-            <div class="ub-timeline-time">20:30</div>
+            <!-- ACTIVIDAD 3 -->
+            <div class="ub-timeline-item">
+              <div class="ub-timeline-dot"></div>
+              <div class="ub-timeline-time">20:00</div>
 
-            <div class="card ub-timeline-card" data-bs-toggle="offcanvas" data-bs-target="#infoDia1Act3">
-              <img src="img/show.jpg" class="card-img-top">
-              <div class="card-body">
-                <h5 class="card-title">Street Freestyle Jam</h5>
-                <p class="card-text small mb-1">Show urbano participativo.</p>
-                <span class="badge bg-primary">Show</span>
+              <div class="card ub-timeline-card" data-bs-toggle="offcanvas" data-bs-target="#infoDia2Act3">
+                <img src="img/dj.jpg" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">Urban DJ Sessions</h5>
+                  <p class="card-text small mb-1">Música urbana non-stop.</p>
+                  <span class="badge bg-danger">Música</span>
+                </div>
               </div>
             </div>
-          </div>
 
+          </div>
         </div>
-      </div>
 
-      <!-- =======================
-          TIMELINE — DÍA 2
-          ======================= -->
-      <div class="ub-timeline-day d-none" id="dia2">
-        <div class="ub-timeline">
-
-          <!-- Actividad 1 -->
-          <div class="ub-timeline-item">
-            <div class="ub-timeline-dot"></div>
-            <div class="ub-timeline-time">17:00</div>
-
-            <div class="card ub-timeline-card" data-bs-toggle="offcanvas" data-bs-target="#infoDia2Act1">
-              <img src="img/show.jpg" class="card-img-top">
-              <div class="card-body">
-                <h5 class="card-title">Street Battle</h5>
-                <p class="card-text small mb-1">Competición de baile urbana.</p>
-                <span class="badge bg-primary">Show</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Actividad 2 -->
-          <div class="ub-timeline-item">
-            <div class="ub-timeline-dot"></div>
-            <div class="ub-timeline-time">18:30</div>
-
-            <div class="card ub-timeline-card" data-bs-toggle="offcanvas" data-bs-target="#infoDia2Act2">
-              <img src="img/burger.jpg" class="card-img-top">
-              <div class="card-body">
-                <h5 class="card-title">International Food Challenge</h5>
-                <p class="card-text small mb-1">Reto gastronómico multicultural.</p>
-                <span class="badge bg-warning text-dark">Comida</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Actividad 3 -->
-          <div class="ub-timeline-item">
-            <div class="ub-timeline-dot"></div>
-            <div class="ub-timeline-time">20:00</div>
-
-            <div class="card ub-timeline-card" data-bs-toggle="offcanvas" data-bs-target="#infoDia2Act3">
-              <img src="img/dj.jpg" class="card-img-top">
-              <div class="card-body">
-                <h5 class="card-title">Urban DJ Sessions</h5>
-                <p class="card-text small mb-1">Música urbana non-stop.</p>
-                <span class="badge bg-danger">Música</span>
-              </div>
-            </div>
-          </div>
-
+        <!-- TEXTO VERTICAL -->
+        <div class="col-lg-3 d-none d-lg-flex justify-content-center">
+          <div class="ub-vertical-title">ACTIVIDADES</div>
         </div>
+
       </div>
+    </div>
 
-      <!-- =======================
-          TIMELINE — DÍA 3
-          ======================= -->
-      <div class="ub-timeline-day d-none" id="dia3">
-        <div class="ub-timeline">
 
-          <!-- Actividad 1 -->
-          <div class="ub-timeline-item">
-            <div class="ub-timeline-dot"></div>
-            <div class="ub-timeline-time">18:00</div>
 
-            <div class="card ub-timeline-card" data-bs-toggle="offcanvas" data-bs-target="#infoDia3Act1">
-              <img src="img/dj.jpg" class="card-img-top">
-              <div class="card-body">
-                <h5 class="card-title">Chill DJ Brunch</h5>
-                <p class="card-text small mb-1">Ambiente suave y brunch urbano.</p>
-                <span class="badge bg-danger">Música</span>
+    <!-- ======================================
+         DÍA 3
+    ======================================= -->
+    <div class="ub-timeline-day d-none" id="dia3">
+
+      <div class="row g-4 align-items-stretch">
+
+        <!-- TIMELINE -->
+        <div class="col-lg-9">
+          <div class="ub-timeline">
+
+            <!-- ACTIVIDAD 1 -->
+            <div class="ub-timeline-item">
+              <div class="ub-timeline-dot"></div>
+              <div class="ub-timeline-time">18:00</div>
+
+              <div class="card ub-timeline-card" data-bs-toggle="offcanvas" data-bs-target="#infoDia3Act1">
+                <img src="img/dj.jpg" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">Chill DJ Brunch</h5>
+                  <p class="card-text small mb-1">Ambiente suave y brunch urbano.</p>
+                  <span class="badge bg-danger">Música</span>
+                </div>
               </div>
             </div>
-          </div>
 
-          <!-- Actividad 2 -->
-          <div class="ub-timeline-item">
-            <div class="ub-timeline-dot"></div>
-            <div class="ub-timeline-time">19:30</div>
+            <!-- ACTIVIDAD 2 -->
+            <div class="ub-timeline-item">
+              <div class="ub-timeline-dot"></div>
+              <div class="ub-timeline-time">19:30</div>
 
-            <div class="card ub-timeline-card" data-bs-toggle="offcanvas" data-bs-target="#infoDia3Act2">
-              <img src="img/show.jpg" class="card-img-top">
-              <div class="card-body">
-                <h5 class="card-title">Graffiti Live Show</h5>
-                <p class="card-text small mb-1">Arte urbano en directo.</p>
-                <span class="badge bg-primary">Show</span>
+              <div class="card ub-timeline-card" data-bs-toggle="offcanvas" data-bs-target="#infoDia3Act2">
+                <img src="img/show.jpg" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">Graffiti Live Show</h5>
+                  <p class="card-text small mb-1">Arte urbano en directo.</p>
+                  <span class="badge bg-primary">Show</span>
+                </div>
               </div>
             </div>
-          </div>
 
-          <!-- Actividad 3 -->
-          <div class="ub-timeline-item">
-            <div class="ub-timeline-dot"></div>
-            <div class="ub-timeline-time">20:30</div>
+            <!-- ACTIVIDAD 3 -->
+            <div class="ub-timeline-item">
+              <div class="ub-timeline-dot"></div>
+              <div class="ub-timeline-time">20:30</div>
 
-            <div class="card ub-timeline-card" data-bs-toggle="offcanvas" data-bs-target="#infoDia3Act3">
-              <img src="img/burger.jpg" class="card-img-top">
-              <div class="card-body">
-                <h5 class="card-title">Street Food Finale</h5>
-                <p class="card-text small mb-1">Gran cierre gastronómico.</p>
-                <span class="badge bg-warning text-dark">Comida</span>
+              <div class="card ub-timeline-card" data-bs-toggle="offcanvas" data-bs-target="#infoDia3Act3">
+                <img src="img/burger.jpg" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">Street Food Finale</h5>
+                  <p class="card-text small mb-1">Gran cierre gastronómico.</p>
+                  <span class="badge bg-warning text-dark">Comida</span>
+                </div>
               </div>
             </div>
-          </div>
 
+          </div>
         </div>
+
+        <!-- TEXTO VERTICAL -->
+        <div class="col-lg-3 d-none d-lg-flex justify-content-center">
+          <div class="ub-vertical-title">ACTIVIDADES</div>
+        </div>
+
       </div>
+    </div>
+
+
+  </div> <!-- END ub-day-content -->
+</section>
+
 
     </div> <!-- END ub-day-content -->
   </section>
