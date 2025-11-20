@@ -49,31 +49,41 @@
     </div>
   </nav>
 
-  <!-- HERO -->
-  <header class="hero">
-    <div class="container h-100 d-flex align-items-center">
-      <div class="row w-100">
-        <div class="col-lg-6 hero-left" data-aos="fade-right">
-          <h1 class="display-1 brutal-title">COMIDA CALLEJERA</h1>
-          <h2 class="lead brutal-lead">Sabores de Japón, China, México, Colombia e Italia. Música, talleres y más.</h2>
-          <div class="mt-4">
-            <a href="tickets.html" class="btn brutal-cta-large me-3">Comprar entradas</a>
-            <a href="#puestos" class="btn brutal-outline">Ver puestos</a>
-          </div>
-        </div>
+  <!-- PARALLAX INTERACTIVO -->
+  <header class="parallax-hero">
 
-        <div class="col-lg-6 hero-right d-none d-lg-block" data-aos="fade-left">
-          <div class="hero-collage">
-            <div class="collage-item c1">JAPÓN</div>
-            <div class="collage-item c2">CHINA</div>
-            <div class="collage-item c3">MÉXICO</div>
-            <div class="collage-item c4">COLOMBIA</div>
-            <div class="collage-item c5">ITALIA</div>
-          </div>
-        </div>
+  <!-- CAPA DE EMOJIS GRANDES (atrás) -->
+  <div class="parallax-layer layer-back" data-speed="0.15">
+    🍣 🌮 🍕 🍜 🥟 🍝 🍤 🌯 🍱
+  </div>
+
+  <!-- CAPA DE EMOJIS PEQUEÑOS (medio) -->
+  <div class="parallax-layer layer-middle" data-speed="0.35">
+    🍙 🍧 🧋 🍡 🍩 🍛 🥡 🍪
+  </div>
+
+  <!-- CAPA DEL LOGO Y EL TEXTO (adelante) -->
+  <div class="parallax-layer layer-front" data-speed="0.7">
+    <div class="parallax-center-content text-center">
+
+      <img src="media/img/titulo-urban-bites.png" class="parallax-logo" alt="Urban Bites">
+
+      <h3 class="parallax-title">SABORES DEL MUNDO</h3>
+
+      <p class="parallax-subtitle">
+        Japón · China · México · Colombia · Italia
+      </p>
+
+      <div class="mt-4">
+        <a href="tickets.html" class="btn brutal-cta-large me-3">Comprar entradas</a>
+        <a href="#puestos" class="btn brutal-outline">Ver puestos</a>
       </div>
     </div>
+  </div>
+
   </header>
+
+
 
   <!-- SECCIÓN PUESTOS (Bootstrap grid + cards) -->
   <section id="puestos" class="py-5 bg-light">
@@ -369,5 +379,24 @@
       once: true
     });
   </script>
+  <script>
+    const pxLayers = document.querySelectorAll('.parallax-layer');
+
+    function updateParallax() {
+      const scrolled = window.pageYOffset;
+
+      pxLayers.forEach(layer => {
+        const speed = parseFloat(layer.dataset.speed);
+        const yPos = scrolled * speed * 0.5;
+        layer.style.transform = `translateY(${yPos}px)`;
+      });
+    }
+
+    window.addEventListener('scroll', () => {
+      requestAnimationFrame(updateParallax);
+    }, { passive: true });
+  </script>
+
+
 </body>
 </html>

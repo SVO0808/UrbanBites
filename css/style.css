@@ -33,7 +33,7 @@ body{
 
 .brutal-navbar{
   background: linear-gradient(90deg, var(--accent1), var(--accent3));
-  padding: 0.6rem 0;
+  padding: 0.8rem 0;
   border-bottom: 6px solid var(--dark);
 }
 .brutal-brand{
@@ -46,48 +46,91 @@ body{
 .brutal-toggler{ border: none; background: transparent; }
 .brutal-burger{ font-size:1.35rem; font-weight:900; color:var(--dark); }
 
-/* HERO */
-.hero{
-  min-height: 70vh;
-  display:block;
-  background: linear-gradient(180deg, rgb(255, 59, 59), rgba(248,249,250,1));
-  padding: 4rem 0;
-}
-.brutal-title{
-  font-family: 'Montserrat', sans-serif;
-  font-weight:900;
-  font-size: clamp(2rem, 6vw, 4rem);
-  color: var(--dark);
-  margin:0;
-  line-height: 0.92;
-}
-.brutal-lead{
-  font-size:1.05rem;
-  color:#222;
-  margin-top:1rem;
-  max-width:40rem;
+/* Inicio de la cabecera  */
+/* PARALLAX  */
+.parallax-hero {
+  position: relative;
+  height: 95vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 6px solid var(--dark);
+  background: linear-gradient(180deg, black, #fff);
 }
 
-/* collage hero */
-.hero-collage{ display:flex; flex-wrap:wrap; gap:10px; justify-content:center; }
-.collage-item{
-  width:68%;
-  height:60px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-weight:900;
-  color:var(--dark);
-  border-radius:6px;
-  font-family:'Montserrat', sans-serif;
-  transform:skew(-6deg);
-  box-shadow: 6px 6px 0 rgba(0,0,0,0.06);
+/* ===== CAPAS ===== */
+.parallax-layer {
+  position: absolute;
+  width: 180%;
+  text-align: center;
+  white-space: nowrap;      /* Emoticonos en línea */
+  pointer-events: none;
 }
-.c1{ background:var(--accent1); }
-.c2{ background:var(--accent2); color:#fff; }
-.c3{ background:var(--accent3); color:#003; }
-.c4{ background:#ffd6cc; }
-.c5{ background:#ffefc0; }
+
+/* Emojis grandes */
+.layer-back {
+  top: 80%;
+  font-size: 4.5rem;        /* tamaño grande */
+  opacity: 0.22;
+}
+
+/* Emojis medianos */
+.layer-middle {
+  top: 40%;
+  font-size: 2.8rem;
+  opacity: 0.28;
+}
+
+/* Contenido frontal */
+.layer-front {
+  top: 0;
+  width: 100%;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ===== CONTENIDO DEL CENTRO ===== */
+.parallax-center-content {
+  position: relative;
+  z-index: 20;
+  padding: 1rem;
+}
+
+/* LOGO */
+.parallax-logo {
+  width: 400px;
+  height: auto;
+  margin-bottom: 1rem;
+  margin-top: 10rem;
+}
+
+/* TITULO PRINCIPAL */
+.parallax-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900; 
+  color: var(--dark);
+  margin-bottom: .5rem;
+}
+
+/* SUBTÍTULO */
+.parallax-subtitle {
+  color: #222;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-top: 0.5rem;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .layer-back { font-size: 3rem; }
+  .layer-middle { font-size: 1.8rem; }
+  .parallax-logo { width: 220px; }
+  .parallax-title { font-size: 1.4rem; }
+}
+
+
+/* Fin de la cabecera  */
 
 /* Cards */
 .brutal-card{
