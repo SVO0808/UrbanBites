@@ -6,15 +6,28 @@
   --muted: #f7f5f0;
 }
 
-/* Reset tipográfico */
 body{
   font-family: 'Inter', system-ui, Arial, sans-serif;
   background: var(--bg);
   color: var(--dark);
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
-  padding-top: 70px; /* espacio para navbar fija */
+  padding-top: 70px;
 }
+
+@font-face {
+  font-family: "Rackety";
+  src: url("../media/typo/Rackety.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.brutal-title {
+  font-family: "Rackety", 'Montserrat', sans-serif;
+  font-weight: normal; 
+  font-size: 3rem;   
+}
+
 
 /* Navbar */
 .logo-urban {
