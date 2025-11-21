@@ -549,6 +549,8 @@ a:hover{
   font-weight: 600;
   margin-bottom: .5rem;
   color: #333;
+  padding-left: 8px; 
+  margin-left: 6px;
 }
 
 /* Cards visibles */
@@ -557,46 +559,8 @@ a:hover{
   cursor: pointer;
   border-radius: 12px;
   overflow: hidden;
-}
-
-
-
-
-.ub-timeline {
-  position: relative;
-  border-left: 3px solid #ddd;
-  padding-left: 1rem;
-}
-
-.ub-timeline-item {
-  position: relative;
-  margin-bottom: 3rem;
-}
-
-.ub-timeline-dot {
-  width: 18px;
-  height: 18px;
-  background: #ff3b3f;
-  border-radius: 50%;
-  position: absolute;
-  left: -9px;
-  top: 3px;
-}
-
-.ub-timeline-time {
-  font-weight: 600;
-  margin-bottom: .5rem;
-  color: #333;
-  padding-left: 8px; 
-  margin-left: 6px;
-}
-
-.ub-timeline-card {
   max-width: 450px;      /* ← ajústalo a tu gusto (380–450px queda perfecto) */
   width: 100%;
-  border-radius: 12px;
-  overflow: hidden;
-  transition: transform .2s, box-shadow .2s;
 }
 
 .ub-timeline-card img {
