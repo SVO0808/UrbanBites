@@ -33,16 +33,7 @@
       <button class="navbar-toggler brutal-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav2">
         <span class="brutal-burger">☰</span>
       </button>
-      <!-- Icono Carrito -->
-      <button class="btn position-relative ms-3" id="cartButton" style="background: transparent; border: none;">
-        <i class="fa-solid fa-cart-shopping fa-lg"></i>
-
-        <span id="cartCount" 
-              class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark text-white"
-              style="font-size: 0.7rem;">
-          0
-        </span>
-      </button>
+      
 
 
         <div class="dropdown-menu dropdown-menu-end p-3" style="min-width: 260px; background: var(--accent1); border: 3px solid var(--dark);">
@@ -67,50 +58,85 @@
   <main class="py-5">
     <!-- COUNTDOWN -->
       <section class="my-5" id="countdown-section" data-aos="fade-up">
-        <div class="container text-center">
-          
-          <div id="countdown" class="row justify-content-center gap-2 mt-3 text-center">
+  <div class="container text-center">
 
-            <div class="col-6 col-md-3">
-              <div class="count-box">
-                <span id="cd-days">0</span>
-                <small>Días</small>
-              </div>
+    <div class="row align-items-center justify-content-center g-4">
+
+      <!-- ======= COLUMNA IZQUIERDA (COUNTDOWN NORMAL) ======= -->
+      <div class="col-12 col-md-7">
+        <div id="countdown" class="row justify-content-center text-center">
+
+          <div class="col-6 col-md-3">
+            <div class="count-box-simple">
+              <span id="cd-days">0</span>
+              <small>Días</small>
             </div>
-
-            <div class="col-6 col-md-3">
-              <div class="count-box">
-                <span id="cd-hours">0</span>
-                <small>Horas</small>
-              </div>
-            </div>
-
-            <div class="col-6 col-md-3">
-              <div class="count-box">
-                <span id="cd-minutes">0</span>
-                <small>Minutos</small>
-              </div>
-            </div>
-
-            <div class="col-6 col-md-3">
-              <div class="count-box">
-                <span id="cd-seconds">0</span>
-                <small>Segundos</small>
-              </div>
-            </div>
-
           </div>
-          <h2 class="countdown-title">CUENTA REGRESIVA PARA EL INICIO DE URBAN BITES</h2>
-          <p class="countdown-sub">¡Prepárate para vivir Urban Bites!</p>
+
+          <div class="col-6 col-md-3">
+            <div class="count-box-simple">
+              <span id="cd-hours">0</span>
+              <small>Horas</small>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-3">
+            <div class="count-box-simple">
+              <span id="cd-minutes">0</span>
+              <small>Minutos</small>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-3">
+            <div class="count-box-simple">
+              <span id="cd-seconds">0</span>
+              <small>Segundos</small>
+            </div>
+          </div>
+
         </div>
-      </section>
+
+        <h2 class="countdown-title mt-3 monty-title">CUENTA REGRESIVA PARA EL INICIO DE URBAN BITES</h2>
+        <p class="countdown-sub">¡Prepárate para vivir una experiencia inolvidable!</p>
+      </div>
+
+
+      <!-- ======= COLUMNA DERECHA (BLOB + EMOJI) ======= -->
+      <div class="col-12 col-md-5 d-flex justify-content-center">
+      <div class="blob-emoji-morph">
+        ​🎟️
+      </div>
+    </div>
+
+
+    </div>
+  </div>
+</section>
+
 
 
 
 
     <div class="container">
-      <h1 class="brutal-title" data-aos="fade-up">ENTRADAS</h1>
-      <p class="mb-4" data-aos="fade-up" data-aos-delay="50">¡Reserva tus entradas seleccionando la que más te interese!</p>
+      <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap" data-aos="fade-up">
+  <h1 class="brutal-title m-0">ENTRADAS</h1>
+
+  <!-- Icono Carrito -->
+      <button class="btn position-relative ms-3 brutal-cart-btn-title" id="cartButton" style="background: transparent; border: none;">
+        <i class="fa-solid fa-cart-shopping fa-lg"></i>
+
+        <span id="cartCount" 
+              class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark text-white"
+              style="font-size: 0.7rem;">
+          0
+        </span>
+      </button>
+</div>
+
+<p class="mb-4" data-aos="fade-up" data-aos-delay="50">
+  ¡Reserva tus entradas seleccionando la que más te interese!
+</p>
+
 
       <div class="row g-4">
         <div class="col-12 col-md-4" data-aos="fade-up" data-aos-delay="100">

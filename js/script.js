@@ -173,7 +173,7 @@ document.querySelectorAll(".ub-day-btn").forEach(btn => {
 //      CUENTA ATRÁS DEL EVENTO
 
 // FECHA DEL EVENTO (MODIFICA AQUÍ)
-const eventDate = new Date("2025-12-01T17:00:00").getTime(); 
+const eventDate = new Date("2025-11-27T17:00:00").getTime(); 
 // Ejemplo: 21 agosto 2025 a las 17:00h
 
 function updateCountdown() {
@@ -203,17 +203,3 @@ updateCountdown(); // Primera llamada instantánea
 
 
 
-
-// const btns = document.querySelectorAll('.filter-btn');
-// const items = document.querySelectorAll('.activity');
-
-// btns.forEach(btn => {
-//   btn.onclick = () => {
-//     const filter = btn.getAttribute('data-filter');
-//     items.forEach(item => {
-//       item.style.display = (filter === "all" || item.classList.contains(filter))
-//         ? "block"
-//         : "none";
-//     });
-//   };
-// });
