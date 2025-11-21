@@ -382,29 +382,32 @@ body{
 .emoji-separator {
   background: var(--accent1);
   overflow: hidden;
-  /* border-top: 6px solid var(--dark);
-  border-bottom: 6px solid var(--dark); */
 }
 
 .emoji-row {
-  display: inline-block;  
-  font-size: 2.8rem;
-  opacity: 0.9;
-  white-space: nowrap; 
-  animation: emojiScroll 12s linear infinite;
+  display: flex;
+  width: 100%;
+  overflow: hidden;
 }
 
-/* Animación suave de desplazamiento */
+.emoji-track {
+  display: inline-block;
+  font-size: 2.8rem;
+  opacity: 0.9;
+  white-space: nowrap;
+  animation: emojiScroll 20s linear infinite;
+}
+
+/* Animación infinita */
 @keyframes emojiScroll {
   0% { transform: translateX(0); }
-  100% { transform: translateX(-20%); }
+  100% { transform: translateX(-50%); }
 }
 
 /* responsive */
 @media (max-width: 768px) {
-  .emoji-row { font-size: 1.8rem; }
+  .emoji-track { font-size: 1.8rem; }
 }
-
 
 /* ----- CAROUSEL FIXED HEIGHT ----- */
 #momentsCarousel .carousel-item img {
