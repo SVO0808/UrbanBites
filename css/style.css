@@ -922,3 +922,16 @@ a:hover{
 .faq-section-fixed {
   min-height: 375px; /* ajusta este valor según tu altura real */
 }
+
+@media (max-width: 991px) {
+  .faq-section-fixed {
+    min-height: 400px; /* Más alto porque el accordion hace más salto */
+  }
+}
+
+/* Móvil (menos de 768px) */
+@media (max-width: 767px) {
+  .faq-section-fixed {
+    min-height: 495px; /* Ajustado para pantallas pequeñas */
+  }
+}
