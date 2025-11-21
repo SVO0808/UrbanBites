@@ -638,22 +638,6 @@ a:hover{
   color: #fff !important;
 }
 
-.ub-vertical-title {
-  writing-mode: vertical-rl;
-  font-family: 'Montserrat';
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  font-size: 14rem;
-  position: absolute;
-  right: 5%;
-  top: 25%;
-  color: var(--accent1);
-  z-index: -1;
-  padding-left: 2%;
-}
-
 .ub-day-btn {
   background: #222;
   color: var(--accent1);
@@ -697,8 +681,36 @@ a:hover{
   box-shadow: 6px 6px 0 rgba(0,0,0,0.18);
 }
 
+/* Título vertical fijo */
+.ub-fixed-title {
+  position: absolute;
+  right: 30px;
+  top: 950px;
+  transform: translateY(-50%);
+  writing-mode: vertical-rl;
+  font-family: 'Montserrat';
+  font-size: 11rem;
+  line-height: 1;
+  color: var(--accent1);
+  pointer-events: none;
+  z-index: -1;
+}
 
+.ub-fixed-title .copy {
+  position: absolute;           /* TODAS deben ser absolute */
+  writing-mode: vertical-rl;
+  font-family: 'Montserrat';
+  font-size: 11rem;
+  color: var(--accent1);
+  pointer-events: none;
+}
 
+.copy-1 { top: 50px; right: 150px; opacity: 1; }
+.copy-2 { top: 100px; right: 300px; opacity: 0.8; }
+.copy-3 { top: 150px; right: 450px; opacity: 0.6; }
+.copy-4 { top: 200px; right: 600px; opacity: 0.4; }
+.copy-5 { top: 250px; right: 750px; opacity: 0.2; }
+.copy-6 { top: 300px; right: 900px; opacity: 0.05; }
 
 /* ==== COUNTDOWN ===== */
 
@@ -889,5 +901,19 @@ a:hover{
 
   .logo-urban {
     height: 26px;           /* para que no “apriete” el nav */
+  }
+}
+
+@media (max-width: 767px) {
+  .ub-fixed-title .copy {
+    display: none !important;
+  }
+  .ub-fixed-title {
+    display: none !important;
+  }
+}
+@media (min-width: 768px) {
+  .ub-fixed-title .copy {
+    display: block !important;
   }
 }
