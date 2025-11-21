@@ -183,7 +183,7 @@ body{
 
 /* LOGO */
 .parallax-logo {
-  width: 400px;
+  width: clamp(380px, 28vw, 800px);
   height: auto;
   margin-bottom: 1rem;
   margin-top: 10rem;
@@ -193,6 +193,7 @@ body{
 .parallax-title {
   font-family: 'Montserrat', sans-serif;
   font-weight: 900; 
+  font-size: clamp(1.8rem, 5vw, 5rem);
   color: white;
   margin-bottom: .5rem;
   margin-top: 2rem;
@@ -201,7 +202,7 @@ body{
 /* SUBTÍTULO */
 .parallax-subtitle {
   color: white;
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 2.8vw, 2.2rem);
   font-weight: 700;
   margin-top: 0.5rem;
 }
@@ -210,8 +211,23 @@ body{
 @media (max-width: 768px) {
   .layer-back { font-size: 3rem; }
   .layer-middle { font-size: 1.8rem; }
-  .parallax-logo { width: 220px; }
+  .parallax-logo { width: clamp(350px, 28vw, 800px); }
   .parallax-title { font-size: 1.4rem; }
+}
+
+@media (min-width: 1400px) {
+  .parallax-logo {
+    width: 700px;
+  }
+  .parallax-title {
+    font-size: 4.5rem;
+  }
+  .parallax-subtitle {
+    font-size: 2rem;
+  }
+  .parallax-center-content .btn {
+    font-size: 1.6rem;
+  }
 }
 
 /* --- Responsividad del título y subtítulo --- */
@@ -227,7 +243,8 @@ body{
 }
 
 .parallax-center-content .btn {
-  font-size: clamp(0.9rem, 2.3vw, 1.1rem);
+  font-size: clamp(1rem, 2vw, 1.7rem);
+  padding: clamp(.6rem, 1vw, 1.4rem) clamp(1rem, 2vw, 2.2rem);
 }
 
 
