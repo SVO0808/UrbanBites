@@ -862,7 +862,7 @@ a:hover{
 
 @media (min-width: 1400px) {
   .container {
-    max-width: 1700px;
+    max-width: 1900px;
   }
 
   .ub-timeline-card {
@@ -881,7 +881,13 @@ a:hover{
   }
 }
 
-.gallery-section .container {
-  max-width: 1700px;   /* o 1800 / 1900 si quieres más ancho */
-  height: auto;
+/* NAVBAR — version móvil */
+@media (max-width: 768px) {
+  .brutal-navbar {
+    padding: 0.8rem 1rem;   /* mucho más equilibrado */
+  }
+
+  .logo-urban {
+    height: 26px;           /* para que no “apriete” el nav */
+  }
 }
