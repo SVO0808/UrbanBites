@@ -581,7 +581,7 @@ a:hover{
 
 /* Hora */
 .ub-timeline-time {
-  font-weight: 600;
+  font-weight: 700;
   margin-bottom: .5rem;
   color: #333;
   padding-left: 8px; 
@@ -594,7 +594,7 @@ a:hover{
   cursor: pointer;
   border-radius: 12px;
   overflow: hidden;
-  max-width: 450px;   
+  max-width: 600px;   
   width: 100%;
   border: 2px solid black;
   filter: grayscale(100%);
@@ -628,11 +628,13 @@ a:hover{
   align-items: center;
   justify-content: center;
   height: 100%;
-  font-size: 10rem;
+  font-size: 14rem;
   position: absolute;
-  right: 15%;
-  top: 50%;
+  right: 5%;
+  top: 25%;
   color: var(--accent1);
+  z-index: -1;
+  padding-left: 2%;
 }
 
 .ub-day-btn {
@@ -719,10 +721,8 @@ a:hover{
   display: flex;
   align-items: center;
   justify-content: center;
-
   font-size: 5rem; /* tamaño del emoji */
   border: 5px solid var(--dark);
-
   animation: blobMorphEmoji 6s ease-in-out infinite;
 }
 
