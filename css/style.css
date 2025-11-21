@@ -378,33 +378,31 @@ body{
   font-weight:800;
 }
 
-/* ===== SEPARADOR DE EMOJIS ENTRE SECCIONES ===== */
 .emoji-separator {
   background: var(--accent1);
   overflow: hidden;
 }
 
 .emoji-row {
-  display: flex;
   width: 100%;
   overflow: hidden;
+  display: flex;
 }
 
 .emoji-track {
   display: inline-block;
-  font-size: 2.8rem;
-  opacity: 0.9;
   white-space: nowrap;
-  animation: emojiScroll 20s linear infinite;
+  font-size: 2.8rem;
+  animation: emojiScroll 15s linear infinite;
 }
 
-/* Animación infinita */
+/* Animación infinita sin cortes */
 @keyframes emojiScroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); } 
 }
 
-/* responsive */
+/* Responsive */
 @media (max-width: 768px) {
   .emoji-track { font-size: 1.8rem; }
 }
