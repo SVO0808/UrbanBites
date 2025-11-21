@@ -859,3 +859,18 @@ a:hover{
     height: 200px;
   }
 }
+
+@media (min-width: 1400px) {
+  #actividades-ub.container {
+    max-width: 1700px;
+  }
+  .ub-timeline-card {
+  max-width: 1000px;   
+  width: 100%;
+}
+
+.gallery-section .container {
+    max-width: 1700px;   /* o 1800 / 1900 si quieres más ancho */
+    height: auto;
+  }
+}
