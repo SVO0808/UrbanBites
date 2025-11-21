@@ -861,16 +861,30 @@ a:hover{
 }
 
 @media (min-width: 1400px) {
-  #actividades-ub.container {
+  .container {
     max-width: 1700px;
   }
+
   .ub-timeline-card {
   max-width: 1000px;   
   width: 100%;
+  }
+    nav .container {
+    max-width: 1700px;   /* o 1800 / 1900 para aún más ancho */
+  }
+
+  .logo-urban {
+    height: 48px;
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 1.25rem;  
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }
 
 .gallery-section .container {
-    max-width: 1700px;   /* o 1800 / 1900 si quieres más ancho */
-    height: auto;
-  }
+  max-width: 1700px;   /* o 1800 / 1900 si quieres más ancho */
+  height: auto;
 }
