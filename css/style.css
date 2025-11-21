@@ -869,9 +869,6 @@ a:hover{
   max-width: 1000px;   
   width: 100%;
   }
-    nav .container {
-    max-width: 1700px;   /* o 1800 / 1900 para aún más ancho */
-  }
 
   .logo-urban {
     height: 48px;
