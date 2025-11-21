@@ -772,3 +772,73 @@ a:hover{
   }
 }
 
+/* ==== MAPA ==== */
+
+
+/* ---------------------- */
+/*     MAPA CON FLIP      */
+/* ---------------------- */
+
+.map-flip-container {
+  width: 100%;
+  height: 360px;
+  perspective: 1200px;            /* Profundidad 3D */
+  margin-top: 20px;
+}
+
+.map-flip-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;   /* Permite caras 3D */
+  transition: transform 1s ease;  /* Velocidad del giro */
+}
+
+/* FLIP VERTICAL EN HOVER */
+.map-flip-container:hover .map-flip-inner {
+  transform: rotateX(180deg);
+}
+
+/* Estilo común de las dos caras */
+.map-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 6px solid #000;        /* Puedes cambiar a var(--dark) si usas variables */
+  backface-visibility: hidden;   /* Oculta la cara trasera */
+}
+
+.map-face iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  pointer-events: none;          /* Evita que el cursor interactúe y rompa el hover */
+}
+
+/* CARA FRONTAL */
+.map-front {
+  transform: rotateX(0deg);
+}
+
+/* CARA TRASERA (ROTADA PARA VERSE DEL DERECHO) */
+.map-back {
+  transform: rotateX(180deg);
+}
+
+/* ---------------------- */
+/*      RESPONSIVE        */
+/* ---------------------- */
+
+@media (max-width: 768px) {
+  .map-flip-container {
+    height: 260px;
+  }
+}
+
+@media (max-width: 480px) {
+  .map-flip-container {
+    height: 200px;
+  }
+}
