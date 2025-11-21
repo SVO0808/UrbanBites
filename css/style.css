@@ -628,10 +628,6 @@ a:hover{
   border: 3px solid var(--dark);
   font-weight: 900;
   padding: .6rem;
-<<<<<<< Updated upstream
-}
-=======
-<<<<<<< HEAD
 }
 
 
@@ -702,9 +698,3 @@ a:hover{
 #cd-hours    { animation-delay: .8s; }
 #cd-minutes  { animation-delay: 1.6s; }
 #cd-seconds  { animation-delay: 2.4s; }
-
-
-=======
-}
->>>>>>> 5c0d04cb7805b8422d24ee85650322038a6a59a2
->>>>>>> Stashed changes
