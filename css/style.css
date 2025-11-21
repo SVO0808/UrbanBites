@@ -565,7 +565,7 @@ a:hover{
 .ub-timeline {
   position: relative;
   border-left: 3px solid #ddd;
-  padding-left: 2rem;
+  padding-left: 1rem;
 }
 
 .ub-timeline-item {
@@ -592,11 +592,17 @@ a:hover{
 }
 
 .ub-timeline-card {
-  max-width: 420px;      /* ← ajústalo a tu gusto (380–450px queda perfecto) */
+  max-width: 450px;      /* ← ajústalo a tu gusto (380–450px queda perfecto) */
   width: 100%;
   border-radius: 12px;
   overflow: hidden;
   transition: transform .2s, box-shadow .2s;
+}
+
+.ub-timeline-card img {
+  width: 100% !important;
+  height: auto !important;   
+  max-height: 350px;      /* evita que la imagen expanda el contenedor */
 }
 
 .ub-timeline-card:hover {
@@ -612,19 +618,13 @@ a:hover{
 
 .ub-vertical-title {
   writing-mode: vertical-rl;
-  text-orientation: sideways;
   font-family: 'Montserrat';
-  font-weight: 900;
-  font-size: 3rem;
-  letter-spacing: 4px;
-  opacity: 0.15;
-  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 100%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
+  font-size: 10rem;
 }
-
 
 /* ==== CARRITO ==== */
 
