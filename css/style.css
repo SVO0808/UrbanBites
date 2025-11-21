@@ -628,4 +628,83 @@ a:hover{
   border: 3px solid var(--dark);
   font-weight: 900;
   padding: .6rem;
+<<<<<<< Updated upstream
 }
+=======
+<<<<<<< HEAD
+}
+
+
+
+/* ==== COUNTDOWN ===== */
+.countdown-title {
+  font-family: "Rackety", 'Montserrat', sans-serif;
+  font-size: 2.6rem;
+  line-height: 70%;
+  margin-bottom: .5rem;
+  margin-top: 2rem;
+}
+
+.countdown-sub {
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 1.5rem;
+}
+
+/* Estilos base de los contenedores del countdown */
+/* COUNTDOWN BOX – forma orgánica */
+.count-box {
+  width: 140px;
+  height: 140px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: bold;
+
+  background: linear-gradient(135deg, #FF8A00, #E52E71); /* tu degradado */
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;       /* forma inicial */
+
+  animation: blobMorph 8s ease-in-out infinite;
+  transition: border-radius 0.5s ease;
+}
+
+/* Texto pequeño */
+.count-box small {
+  margin-top: 8px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+
+/* 🎬 ANIMACIÓN “organic blob” usando border-radius (8 valores) */
+@keyframes blobMorph {
+  0% {
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  }
+  33% {
+    border-radius: 58% 42% 75% 25% / 40% 58% 42% 60%;
+  }
+  66% {
+    border-radius: 35% 65% 30% 70% / 60% 30% 70% 40%;
+  }
+  100% {
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  }
+}
+
+/* Desfase de cada caja para que no hagan lo mismo al mismo tiempo */
+#cd-days     { animation-delay: 0s; }
+#cd-hours    { animation-delay: .8s; }
+#cd-minutes  { animation-delay: 1.6s; }
+#cd-seconds  { animation-delay: 2.4s; }
+
+
+=======
+}
+>>>>>>> 5c0d04cb7805b8422d24ee85650322038a6a59a2
+>>>>>>> Stashed changes

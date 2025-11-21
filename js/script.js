@@ -170,6 +170,37 @@ document.querySelectorAll(".ub-day-btn").forEach(btn => {
 
 
 
+//      CUENTA ATRÁS DEL EVENTO
+
+// FECHA DEL EVENTO (MODIFICA AQUÍ)
+const eventDate = new Date("2025-12-01T17:00:00").getTime(); 
+// Ejemplo: 21 agosto 2025 a las 17:00h
+
+function updateCountdown() {
+  const now = new Date().getTime();
+  const diff = eventDate - now;
+
+  if (diff <= 0) {
+    document.getElementById("countdown").innerHTML =
+      "<h3 class='text-center fw-bold mt-3'>¡El festival ha comenzado! 🎉🔥</h3>";
+    clearInterval(counter);
+    return;
+  }
+
+  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+  document.getElementById("cd-days").innerText = days;
+  document.getElementById("cd-hours").innerText = hours;
+  document.getElementById("cd-minutes").innerText = minutes;
+  document.getElementById("cd-seconds").innerText = seconds;
+}
+
+const counter = setInterval(updateCountdown, 1000);
+updateCountdown(); // Primera llamada instantánea
+
 
 
 
