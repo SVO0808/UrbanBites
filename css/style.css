@@ -918,3 +918,7 @@ a:hover{
     display: block !important;
   }
 }
+
+.faq-section-fixed {
+  min-height: 375px; /* ajusta este valor según tu altura real */
+}
