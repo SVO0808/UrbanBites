@@ -814,11 +814,13 @@ a:hover{
   height: 360px;
   perspective: 1200px;            /* Profundidad 3D */
   margin-top: 20px;
+  max-width: 100%;
 }
 
 .map-flip-inner {
   position: relative;
   width: 100%;
+  max-width: 100%;
   height: 100%;
   transform-style: preserve-3d;   /* Permite caras 3D */
   transition: transform 1s ease;  /* Velocidad del giro */
@@ -838,10 +840,12 @@ a:hover{
   overflow: hidden;
   border: 6px solid #000;        /* Puedes cambiar a var(--dark) si usas variables */
   backface-visibility: hidden;   /* Oculta la cara trasera */
+  max-width: 100%;
 }
 
 .map-face iframe {
   width: 100%;
+  max-width: 100%;
   height: 100%;
   border: none;
   pointer-events: none;          /* Evita que el cursor interactúe y rompa el hover */
@@ -935,3 +939,12 @@ a:hover{
     min-height: 495px; /* Ajustado para pantallas pequeñas */
   }
 }
+
+@media (min-width: 1400px) and (max-width: 2230px) {
+  .container {
+    max-width: 2350px;     /* más amplio que antes */
+    padding-left: 180px;   /* margen lateral aún mayor */
+    padding-right: 180px;
+  }
+}
+
