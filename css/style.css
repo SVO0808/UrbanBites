@@ -828,7 +828,7 @@ a:hover{
 
 /* FLIP VERTICAL EN HOVER */
 .map-flip-container:hover .map-flip-inner {
-  transform: rotateX(180deg);
+  transform: rotateX(180deg) scale(0.85);
 }
 
 /* Estilo común de las dos caras */
